@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- for car interface lookupmethod -->
+
+	<bean id="c" class="com.psl.beans.Car">
+		<lookup-method name="myCarEngine" bean="e" />
+	</bean>
+
+	<bean id="e" class="com.psl.beans.Engine">
+		<property name="name" value="SwiftEngine"></property>
+	</bean>
+	
+	<!-- for Bus abstract class lookupmethod -->
+
+	<bean id="b" class="com.psl.beans.Bus">
+		<lookup-method name="myBusEngine" bean="e1" />
+	</bean>
+
+	<bean id="e1" class="com.psl.beans.Engine">
+		<property name="name" value="TATAEngine"></property>
+	</bean>
+	
+	<!-- for concrete Truck lookupmethod -->
+
+	<bean id="t" class="com.psl.beans.Truck">
+		<lookup-method name="myTruckEngine" bean="e2" />
+	</bean>
+
+	<bean id="e2" class="com.psl.beans.Engine">
+		<property name="name" value="BENZEngine"></property>
+	</bean>
+</beans>

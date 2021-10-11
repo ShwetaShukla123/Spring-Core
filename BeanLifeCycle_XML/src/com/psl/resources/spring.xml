@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+        default-init-method="init" default-destroy-method="destroy"
+        >
+
+	<!-- <bean id="t" class="com.psl.beans.Test" init-method="connInit"
+		destroy-method="connDestroy">
+		<property name="driver"
+			value="oracle.jdbc.driver.OracleDriver"></property>
+		<property name="url"
+			value="jdbc:oracle:thin:@localhost:1521/XEPDB1"></property>
+		<property name="username" value="sys as sysdba"></property>
+		<property name="password" value="123"></property>
+	</bean>
+	 -->
+	 
+	 <bean id="t" class="com.psl.beans.Test" >
+		<property name="driver"
+			value="oracle.jdbc.driver.OracleDriver"></property>
+		<property name="url"
+			value="jdbc:oracle:thin:@localhost:1521/XEPDB1"></property>
+		<property name="username" value="sys as sysdba"></property>
+		<property name="password" value="123"></property>
+	</bean>
+	
+	<bean id = "t1" class="com.psl.beans.Test1" ></bean>
+		
+		<bean id = "t2" class="com.psl.beans.Test2" ></bean>
+</beans>
